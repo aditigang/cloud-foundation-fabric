@@ -3,8 +3,9 @@ module "eu-buckets" {
   project_id = "rashi-playground-2"
   prefix     = "test"
   names      = ["bucket-one", "bucket-two"]
+  location   = "us" 
   bucket_policy_only = {
-    bucket-one = false
+    bucket-three = false
   }
   iam_members = {
     bucket-two = {
