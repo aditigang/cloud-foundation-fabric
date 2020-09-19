@@ -3,15 +3,7 @@ module "eu-buckets" {
   project_id = "rashi-playground-2"
   prefix     = "test"
   names      = ["bucket-one", "bucket-two"]
-  location   = "us" 
-  iam_members = {
-    bucket-two = {
-      "roles/storage.admin" = ["member:aditi.gangrade@quantiphi.com"]
-    }
-  }
-  iam_roles = {
-    bucket-two = ["roles/storage.admin"]
-  }
+  location   = "eu" 
 }
 
 module "us-buckets" {
@@ -19,13 +11,14 @@ module "us-buckets" {
   project_id = "rashi-playground-2"
   prefix     = "test-2"
   names      = ["bucket-three", "bucket-four"]
+  location   = "us"
+}
+module "us-buckets-regional" {
+  source     = "./../../modules/gcs"
+  project_id = "rashi-playground-2"
+  prefix     = "test-2"
+  names      = ["bucket-five", "bucket-six"]
   location   = "eu"
-  iam_members = {
-    bucket-four = {
-      "roles/storage.admin" = ["member:aditi.gangrade@quantiphi.com"]
-    }
-  }
-  iam_roles = {
-    bucket-four = ["roles/storage.admin"]
-  }
+  
+  storage_class = "REGIONAL" 
 }
