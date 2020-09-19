@@ -28,7 +28,4 @@ module "us-buckets" {
   iam_roles = {
     bucket-four = ["roles/storage.admin"]
   }
-  retention_policy = {
-     bucket-three = { retention_period = 100 , is_locked = true}
-  }
 }
