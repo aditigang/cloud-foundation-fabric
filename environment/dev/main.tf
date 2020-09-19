@@ -6,7 +6,7 @@ module "eu-buckets" {
   location   = "us" 
   iam_members = {
     bucket-two = {
-      "roles/storage.admin" = ["group:storage@example.com"]
+      "roles/storage.admin" = ["gcr-sa-demo@rashi-playground-2.iam.gserviceaccount.com"]
     }
   }
   iam_roles = {
