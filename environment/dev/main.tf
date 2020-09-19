@@ -20,9 +20,6 @@ module "us-buckets" {
   prefix     = "test-2"
   names      = ["bucket-three", "bucket-four"]
   location   = "eu"
-  bucket_policy_only = {
-    bucket-three = false
-  }
   iam_members = {
     bucket-four = {
       "roles/storage.admin" = ["group:storage@example.com"]
