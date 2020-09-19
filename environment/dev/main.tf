@@ -19,6 +19,5 @@ module "us-buckets-regional" {
   prefix     = "test-2"
   names      = ["bucket-five", "bucket-six"]
   location   = "eu"
-  
   storage_class = "REGIONAL" 
 }
