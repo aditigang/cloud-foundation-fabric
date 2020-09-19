@@ -1,4 +1,4 @@
-module "buckets" {
+module "eu-buckets" {
   source     = "./../../modules/gcs"
   project_id = "rashi-playground-2"
   prefix     = "test"
@@ -17,7 +17,7 @@ module "buckets" {
   }
 }
 
-module "buckets" {
+module "us-buckets" {
   source     = "./../../modules/gcs"
   project_id = "rashi-playground-2"
   prefix     = "test-2"
