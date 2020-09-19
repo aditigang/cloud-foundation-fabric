@@ -13,11 +13,3 @@ module "us-buckets" {
   names      = ["bucket-three", "bucket-four"]
   location   = "us"
 }
-module "us-buckets-regional" {
-  source     = "./../../modules/gcs"
-  project_id = "rashi-playground-2"
-  prefix     = "test-2"
-  names      = ["bucket-five", "bucket-six"]
-  location   = "eu"
-  storage_class = "REGIONAL" 
-}
