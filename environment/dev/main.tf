@@ -6,7 +6,7 @@ module "eu-buckets" {
   location   = "us" 
   iam_members = {
     bucket-two = {
-      "roles/storage.admin" = ["aditi.gangrade@quantiphi.com"]
+      "roles/storage.admin" = ["member:aditi.gangrade@quantiphi.com"]
     }
   }
   iam_roles = {
@@ -22,7 +22,7 @@ module "us-buckets" {
   location   = "eu"
   iam_members = {
     bucket-four = {
-      "roles/storage.admin" = ["aditi.gangrade@quantiphi.com"]
+      "roles/storage.admin" = ["member:aditi.gangrade@quantiphi.com"]
     }
   }
   iam_roles = {
